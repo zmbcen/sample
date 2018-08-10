@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7904d07d1e1765a0a199aa11d6301a3",
+    "content-hash": "a49b0808daa652f7bcc5a6562433933d",
     "packages": [
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.54",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "eaa1e26eb643d7fc696d410b45e55290143e1f7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/eaa1e26eb643d7fc696d410b45e55290143e1f7f",
+                "reference": "eaa1e26eb643d7fc696d410b45e55290143e1f7f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.10"
+            },
+            "suggest": {
+                "ablunier/laravel-lang-installer": "Command for easily add languages to a Laravel project",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2018-07-13T08:44:04+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -457,16 +505,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.41",
+            "version": "v5.5.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a2c54e6e69035111fa2709f9cdac55be811feb6b"
+                "reference": "6550ae917b0c49a5915a52cd7c7eafd16fc0b538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a2c54e6e69035111fa2709f9cdac55be811feb6b",
-                "reference": "a2c54e6e69035111fa2709f9cdac55be811feb6b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6550ae917b0c49a5915a52cd7c7eafd16fc0b538",
+                "reference": "6550ae917b0c49a5915a52cd7c7eafd16fc0b538",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -593,7 +641,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-08-01T13:48:57+00:00"
+            "time": "2018-08-08T18:22:44+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1005,6 +1053,63 @@
                 "php"
             ],
             "time": "2018-07-15T17:25:16+00:00"
+        },
+        {
+            "name": "overtrue/laravel-lang",
+            "version": "3.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/laravel-lang.git",
+                "reference": "c49d5f86c2ab2302c06e10d7ebd66a1ac73e0bab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/laravel-lang/zipball/c49d5f86c2ab2302c06e10d7ebd66a1ac73e0bab",
+                "reference": "c49d5f86c2ab2302c06e10d7ebd66a1ac73e0bab",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "caouecs/laravel-lang": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Overtrue\\LaravelLang\\TranslationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\LaravelLang\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "List of 52 languages for Laravel 5",
+            "keywords": [
+                "languages",
+                "laravel",
+                "overtrue"
+            ],
+            "time": "2017-10-28T12:10:43+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3605,16 +3710,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "5.0.9",
+            "version": "5.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "141129c578f58f38f55eccf15a1039bd413ea57c"
+                "reference": "cd1cf05c553ecfec36b170070573e540b67d3f1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/141129c578f58f38f55eccf15a1039bd413ea57c",
-                "reference": "141129c578f58f38f55eccf15a1039bd413ea57c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/cd1cf05c553ecfec36b170070573e540b67d3f1f",
+                "reference": "cd1cf05c553ecfec36b170070573e540b67d3f1f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3633,7 +3738,7 @@
                 "phpunit/phpunit": "<6.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5"
+                "phpunit/phpunit": "^6.5.11"
             },
             "suggest": {
                 "ext-soap": "*"
@@ -3666,7 +3771,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-08-07T07:02:44+00:00"
+            "time": "2018-08-09T05:50:03+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
