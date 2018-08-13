@@ -27,7 +27,7 @@ class SessionsController extends Controller
 
        {
            session()->flash('success', '欢迎回来！');
-           return redirect()->route('users.show', [Auth::user()]);
+           return redirect()->route('users.show', [Auth::user()]);  #Auth::user()可以用来获取当前登录的用户
        }
        else
        {
