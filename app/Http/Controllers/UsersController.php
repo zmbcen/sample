@@ -23,7 +23,7 @@ class UsersController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(10);
         return view('users.index',compact('users'));
     }
 
@@ -85,5 +85,12 @@ class UsersController extends Controller
         return redirect()->route('users.show',$user->id);
     }
 
-
+    public function destroy(User $user)
+    {
+        #只有当传进来的用户满足授权策略的时候，才能执行下面的代码
+        $this->authorize('destroy',$user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        return back();
+    }
 }
