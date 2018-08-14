@@ -9,6 +9,13 @@ use Auth;
 
 class SessionsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest', [
+            'only' => ['create']
+        ]);
+    }
+
     public function create()
     {
         return view('sessions.create');
@@ -27,7 +34,8 @@ class SessionsController extends Controller
 
        {
            session()->flash('success', '欢迎回来！');
-           return redirect()->route('users.show', [Auth::user()]);  #Auth::user()可以用来获取当前登录的用户
+           #登录成功后，将用户重定向到它之前访问的界面，接收一个默认地址参数
+           return redirect()->intended(route('users.show', [Auth::user()]));  #Auth::user()可以用来获取当前登录的用户
        }
        else
        {
