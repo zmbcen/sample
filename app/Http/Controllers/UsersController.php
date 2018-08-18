@@ -48,7 +48,7 @@ class UsersController extends Controller
             'email' => 'required|email|unique:users|max:255',
             'password' => 'required|confirmed|min:6'
         ]);
-
+        #创建了该模型对象，此处同时会执行监听
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -105,6 +105,7 @@ class UsersController extends Controller
         $to = $user->email;
         $subject = "感谢注册 Sample 应用！请确认你的邮箱。";
 
+        #邮箱配置已经配置完毕，调用邮件发送只需要设置接收者和标题即可（调用时记得use Mail）
         Mail::send($view, $data, function ($message) use ($to, $subject) {
             $message->to($to)->subject($subject);
         });
@@ -117,7 +118,7 @@ class UsersController extends Controller
         $user->activation_token = null;
         $user->save();
 
-        Auth::login($user);
+        Auth::login($user);    #调用登录，记得use Auth
         session()->flash('success', '恭喜你，激活成功！');
         return redirect()->route('users.show', [$user]);
     }

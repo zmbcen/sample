@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Notifications\ResetPassword;
+
+use App\Notifications\ResetPassword;#使用该消息通知文件
 
 class User extends Authenticatable
 {
@@ -28,7 +29,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
+    #boot方法会在用户模型类完成初始化之后进行加载
+    #创建监听器，使用触发事件creating，在模型创建时，同时生成一个随机令牌
     public static function boot()
     {
         parent::boot();
