@@ -50,4 +50,10 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPassword($token));
     }
+
+    public function statuses()        #注意方法命名为复数
+    {
+        return $this->hasMany(Status::class);       #一个用户可以有多条微博，一对多
+    }
+
 }
